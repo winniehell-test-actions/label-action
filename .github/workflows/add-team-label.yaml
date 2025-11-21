@@ -15,12 +15,12 @@ jobs:
       with:
         script: |
           const { organization, pull_request, repository, sender } = context.payload;
-          console.log({ pull_request });
-          return
+          // console.log({ pull_request });
           const org = repository.owner.login;
+          const team_slug = 'teamtest';
           console.log({ org });
-          const allTeams = await github.paginate(github.rest.teams.list({ org }));
-          console.log({ allTeams });
+          const allMembers = await github.paginate(github.rest.teams.listMembersInOrg({ org, team_slug }));
+          console.log({ allMembers });
           return
           console.log({ organization });
           console.log({ sender });
