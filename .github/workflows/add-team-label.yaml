@@ -1,4 +1,4 @@
-name: Label PR by Team
+name: Add team labels
 
 on:
   pull_request:
@@ -13,4 +13,4 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        script: .github/scripts/add-team-label.js
+        script: require('.github/scripts/add-team-label.js')
