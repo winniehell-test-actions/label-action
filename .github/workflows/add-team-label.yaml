@@ -13,4 +13,4 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        script-path: .github/scripts/add-team-label.js
+        script: .github/scripts/add-team-label.js
