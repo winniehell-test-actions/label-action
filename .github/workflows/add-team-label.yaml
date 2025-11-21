@@ -16,7 +16,7 @@ jobs:
         script: |
           const { organization, pull_request, repository, sender } = context.payload;
           const org = repository.owner;
-          const allTeams = github.paginate(github.rest.teams({ org }));
+          const allTeams = github.paginate(github.rest.teams.list({ org }));
           console.log({ allTeams });
           return
           console.log({ organization });
