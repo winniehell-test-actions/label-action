@@ -15,6 +15,9 @@ jobs:
       with:
         script: |
           const { organization, pull_request, repository, sender } = context.payload;
+          const teamMembers = ['winniehell'];
+          console.log({ organization, pull_request, repository, sender });
+          return
           const username = pull_request.user.login;
           // console.log({ pull_request });
           const org = repository.owner.login;
