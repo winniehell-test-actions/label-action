@@ -16,6 +16,9 @@ jobs:
         script: |
           const { organization, pull_request, sender } = context.payload;
           console.log({ organization });
+          console.log({ pull_request });
+          console.log({ sender });
+          console.log({ github });
           return
           const username = context.payload.pull_request.user.login;
           const org = context.repo.owner;
