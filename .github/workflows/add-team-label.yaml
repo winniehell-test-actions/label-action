@@ -14,10 +14,9 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         script: |
-          const { actor } = github;
-          console.log({ actor });
-          return
           const { organization, pull_request, repository, sender } = context.payload;
+          console.log({ sender });
+          return
           const teamMembers = ['winniehell'];
           console.log({ organization, pull_request, repository, sender });
           return
