@@ -14,6 +14,8 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         script: |
+          console.log({ context });
+          
           const username = context.payload.pull_request.user.login;
           const org = context.repo.owner;
           
