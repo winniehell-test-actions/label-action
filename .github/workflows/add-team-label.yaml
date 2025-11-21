@@ -14,7 +14,11 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         script: |
-          const { organization, pull_request, sender } = context.payload;
+          const { organization, pull_request, repository, sender } = context.payload;
+          const org = repository.owner;
+          const allTeams = github.paginate(github.rest.teams({ org }));
+          console.log({ allTeams });
+          return
           console.log({ organization });
           console.log({ pull_request });
           console.log({ sender });
