@@ -27,7 +27,7 @@ jobs:
           const username = context.payload.pull_request.user.login;
           // const org = context.repo.owner;
           
-          const allTeams = await github.paginate(context.repo.teams_url);
+          // const allTeams = await github.paginate(context.repo.teams_url);
           console.log({ allTeams });
           
           const labels = [];
