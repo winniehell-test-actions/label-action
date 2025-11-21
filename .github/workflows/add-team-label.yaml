@@ -2,7 +2,7 @@ name: Add team labels
 
 on:
   pull_request:
-    types: [opened, synchronized]
+    types: [opened, synchronize]
 
 jobs:
   label-by-team:
